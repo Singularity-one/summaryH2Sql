@@ -16,15 +16,6 @@ public class SummaryH2SqlApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SummaryH2SqlApplication.class, args);
-
-		Script.main(new String[]{
-				"-url", "jdbc:h2:mem:testdb",  // 你的 H2 連線 URL
-				"-user", "sa",
-				"-password", "",
-				"-script", "init.sql",        // 導出的檔案
-				"-options", "drop"            // 包含 drop table
-		});
-		System.out.println("DDL exported to init.sql");
 	}
 
 	@Bean
